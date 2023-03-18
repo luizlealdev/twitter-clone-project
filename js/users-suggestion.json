@@ -1,0 +1,36 @@
+const suggestionUsers = [{
+      "name": "Linus Torvalds",
+      "username": "torvalds",
+      "githubId": "1024025",
+      "following": true
+    },
+   {
+      "name": "Luiz Leal",
+      "username": "luiz-developer",
+      "githubId": "116567691",
+      "following": true
+    },
+   {
+      "name": "Gustavo Guanabara",
+      "username": "gustavoguanabara",
+      "githubId": "8683378",
+      "following": false
+    },
+   {
+      "name": "Hiago Bernardo",
+      "username": "brazoo",
+      "githubId": "105991097",
+      "following": false
+    },
+    {
+      "name": "Lucas Davi",
+      "username": "LDavi05",
+      "githubId": "105991097",
+      "following": false
+    },
+   {
+      "name": "Mateus Ferreira",
+      "username": "mateus-53",
+      "githubId": "121569308",
+      "following": false
+}]
