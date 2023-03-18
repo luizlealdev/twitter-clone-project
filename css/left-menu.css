@@ -1,0 +1,58 @@
+.left-menu {
+   position: fixed;
+   width: 12rem;
+   height: 100vh;
+   border-right: 2px solid var(--body-color-2);
+   padding: 1rem 1.2rem;
+   font-size: 1.3rem;
+   overflow-y: auto;
+   white-space: nowrap;
+}
+
+.left-menu-content {
+   margin-left: 11px;
+   height: calc(100% + 120px)
+}
+
+.twitter-logo {
+   font-size: 1.9rem;
+   color: var(--main-color);
+}
+
+.twitter-logo-container {
+   margin-bottom: 22px;
+}
+
+.itens {
+   display: flex;
+   flex-direction: column;
+   gap: 16px;
+   list-style: none;
+}
+
+.item {
+   display: flex;
+}
+
+.item span {
+   font-weight: bold;
+   padding: 0px 12px;
+}
+
+.profile-picture {
+   width: 20px;
+   border-radius: 50px;
+}
+
+.tweet-btn {
+   margin-top: 24px;
+   width: 100%;
+   height: 33px;
+   font-size: 0.967rem;
+   color: var(--body-color);
+   background: var(--main-color);
+   border-radius: 50px;
+   border: none;
+   box-shadow: 1px 5px 15px var(--body-color-2);
+   font-weight: bold;
+}
