@@ -1,4 +1,4 @@
-const suggestionUsers = [{
+[{
       "name": "Linus Torvalds",
       "username": "torvalds",
       "githubId": "1024025",
