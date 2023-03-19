@@ -15,72 +15,104 @@
 
 <body>
    <div class="container">
+      <!---left menu-->
       <div class="left-menu">
          <div class="left-menu-content">
             <div class="twitter-logo-container">
                <i class='bx bxl-twitter twitter-logo'></i>
             </div>
             <ul class="itens">
-               <li class="item">
+               <!--Pc and big screen menu itens--> 
+               <li class="item big-screen">
                   <a href="#" class="selected">
                      <i class='bx bxs-home-circle'></i>
                      <span>Home</span>
                   </a>
                </li>
-               <li class="item">
+               <li class="item big-screen">
                   <a href="#">
                      <i class='bx bx-hash'></i>
                      <span>Explore</span>
                   </a>
                </li>
-               <li class="item">
+               <li class="item big-screen">
                   <a href="#">
                      <i class='bx bx-bell'></i>
                      <span>Notifications</span>
                   </a>
                </li>
-               <li class="item">
+               <li class="item big-screen">
                   <a href="#">
                      <i class='bx bx-envelope'></i>
                      <span>Messages</span>
                   </a>
                </li>
-               <li class="item">
+               <li class="item big-screen">
                   <a href="#">
                      <i class='bx bx-bookmark'></i>
                      <span>Bookmarks</span>
                   </a>
                </li>
-               <li class="item">
+               <li class="item big-screen">
                   <a href="#">
                      <i class='bx bx-message-square-detail'></i>
                      <span>Lists</span>
                   </a>
                </li>
-               <li class="item">
+               <li class="item big-screen">
                   <a href="#">
                      <i class="bx bx-user"></i>
                      <span>Profile</span>
                   </a>
                </li>
-               <li class="item">
+               <li class="item big-screen">
                   <a href="#">
                      <i class='bx bx-dots-horizontal-rounded'></i>
                      <span>More</span>
                   </a>
                </li>
+               <!--Mobile icons-->
+               <li class="item mobile-screen">
+                  <a href="#">
+                     <i class='bx bxs-home-circle selected'></i>
+                  </a>
+               </li>
+               <li class="item mobile-screen">
+                  <a href="#">
+                     <i class='bx bx-search'></i>
+                  </a>
+               </li>
+               <li class="item mobile-screen">
+                  <a href="#">
+                     <i class='bx bx-user'></i>
+                  </a>
+               </li>
+               <li class="item mobile-screen">
+                  <a href="#">
+                     <i class='bx bx-bell'></i>
+                  </a>
+               </li>
+               <li class="item mobile-screen">
+                  <a href="#">
+                     <i class='bx bx-envelope'></i>
+                  </a>
+               </li>
             </ul>
+            <!--tweet button-->
             <div class="tweet-btn-container">
                <button class="tweet-btn" type="submit">Tweet</button>
             </div>
          </div>
       </div>
+      <!--right menu-->
       <div class="right-menu">
          <div class="right-menu-content">
+            <!--search input-->
             <form class="search-form">
                <i class="bx bx-search"></i>
                <input type="search" name="search-input" id="search-input" class="search-input" placeholder="Search Twitter" />
             </form>
+            <!--trends section-->
             <div class="trending-container">
                <div class="trending-text-heading">
                   <p class="trending-text">Trends for you</p>
@@ -92,6 +124,7 @@
                   <p class="show-more-btn">Show more</p>
                </div>
             </div>
+            <!--who to follow section-->
             <div class="suggestion-container">
                <div class="suggestion-text-heading">
                   <p class="suggestion-text">Who to follow</p>
