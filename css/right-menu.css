@@ -1,7 +1,7 @@
 .right-menu {
    position: fixed;
    right: 0;
-   width: 17rem;
+   width: 19rem;
    height: 100vh;
    border-left: 2px solid var(--body-color-2);
    padding: 1rem 2.1rem 1rem 1.2em;
@@ -12,7 +12,7 @@
 }
 
 .search-form {
-   background: #E6ECEF;
+   background: #e6ecef;
    width: 100%;
    height: 32px;
    display: flex;
@@ -26,11 +26,11 @@
 .search-form i {
    margin-left: 15px;
    font-size: 15px;
-   color: #93A1AC;
+   color: #93a1ac;
 }
 
 ::placeholder {
-   color: #93A1AC;
+   color: #93a1ac;
 }
 
 .search-input {
@@ -40,10 +40,10 @@
    outline: none;
    font-size: var(--font-size-normal);
 }
- 
-.trending-container, 
+
+.trending-container,
 .suggestion-container {
-   background: #F5F8FA;
+   background: #f5f8fa;
    width: 100%;
    height: auto;
    border-radius: 10px;
@@ -94,7 +94,7 @@
    font-weight: bold;
 }
 
-.sugg-username {
+.sugg-username a {
    font-size: 14px;
    color: #6f7d87;
 }
