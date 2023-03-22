@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
 
 * {
    margin: 0;
@@ -7,19 +7,30 @@
 
 :root {
    --body-color: #fff;
-   --main-color: #1EA1F2;
-   --body-color-2: #D1DAE0;
+   --main-color: #1ea1f2;
+   --body-color-2: #d1dae0;
    --font-size-normal: 1rem;
+}
+
+::-webkit-progress-value {
+   background-color: var(--main-color);
+}
+::-moz-progress-bar {
+   background-color: var(main-color);
 }
 
 body {
    color: #000;
-   font-family: 'Roboto', sans-serif;
+   font-family: "Roboto", sans-serif;
 }
 
 a {
    color: #000;
    text-decoration: none;
+}
+
+a:hover:not(.item a) {
+   text-decoration: underline;
 }
 
 .selected {
