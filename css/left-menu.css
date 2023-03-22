@@ -1,6 +1,6 @@
 .left-menu {
     position: fixed;
-    width: 12rem;
+    width: 14rem;
     height: 100vh;
     border-right: 2px solid var(--body-color-2);
     padding: 1rem 1.2rem;
