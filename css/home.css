@@ -1,1 +1,11 @@
+.home-container {
+   position: absolute;
+   left: 25%;
+   width: 27rem;
+   display: none;
+}
 
+.home-heading p {
+   font-weight: 600;
+   background: red;
+}
