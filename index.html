@@ -1,144 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+      <title>Twitter Clone | Home</title>
+      <link rel="stylesheet" href="css/style.css" />
+      <link rel="stylesheet" href="css/home.css" />
+      <link rel="stylesheet" href="css/left-menu.css" />
+      <link rel="stylesheet" href="css/right-menu.css" />
+      <link
+         href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+         rel="stylesheet"
+      />
+      <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+   </head>
 
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   <title>Twitter Clone | Home</title>
-   <link rel="stylesheet" href="css/style.css">
-   <link rel="stylesheet" href="css/home.css">
-   <link rel="stylesheet" href="css/left-menu.css">
-   <link rel="stylesheet" href="css/right-menu.css">
-   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-</head>
-
-<body>
-   <div class="container">
-      <!---left menu-->
-      <div class="left-menu">
-         <div class="left-menu-content">
-            <div class="twitter-logo-container">
-               <i class='bx bxl-twitter twitter-logo'></i>
-            </div>
-            <ul class="itens">
-               <!--Pc and big screen menu itens--> 
-               <li class="item big-screen">
-                  <a href="#" class="selected">
-                     <i class='bx bxs-home-circle'></i>
-                     <span>Home</span>
-                  </a>
-               </li>
-               <li class="item big-screen">
-                  <a href="#">
-                     <i class='bx bx-hash'></i>
-                     <span>Explore</span>
-                  </a>
-               </li>
-               <li class="item big-screen">
-                  <a href="#">
-                     <i class='bx bx-bell'></i>
-                     <span>Notifications</span>
-                  </a>
-               </li>
-               <li class="item big-screen">
-                  <a href="#">
-                     <i class='bx bx-envelope'></i>
-                     <span>Messages</span>
-                  </a>
-               </li>
-               <li class="item big-screen">
-                  <a href="#">
-                     <i class='bx bx-bookmark'></i>
-                     <span>Bookmarks</span>
-                  </a>
-               </li>
-               <li class="item big-screen">
-                  <a href="#">
-                     <i class='bx bx-message-square-detail'></i>
-                     <span>Lists</span>
-                  </a>
-               </li>
-               <li class="item big-screen">
-                  <a href="#">
-                     <i class="bx bx-user"></i>
-                     <span>Profile</span>
-                  </a>
-               </li>
-               <li class="item big-screen">
-                  <a href="#">
-                     <i class='bx bx-dots-horizontal-rounded'></i>
-                     <span>More</span>
-                  </a>
-               </li>
-               <!--Mobile icons-->
-               <li class="item mobile-screen">
-                  <a href="#">
-                     <i class='bx bxs-home-circle selected'></i>
-                  </a>
-               </li>
-               <li class="item mobile-screen">
-                  <a href="#">
-                     <i class='bx bx-search'></i>
-                  </a>
-               </li>
-               <li class="item mobile-screen">
-                  <a href="#">
-                     <i class='bx bx-user'></i>
-                  </a>
-               </li>
-               <li class="item mobile-screen">
-                  <a href="#">
-                     <i class='bx bx-bell'></i>
-                  </a>
-               </li>
-               <li class="item mobile-screen">
-                  <a href="#">
-                     <i class='bx bx-envelope'></i>
-                  </a>
-               </li>
-            </ul>
-            <!--tweet button-->
-            <div class="tweet-btn-container">
-               <button class="tweet-btn" type="submit">Tweet</button>
-            </div>
-         </div>
-      </div>
-      <!--right menu-->
-      <div class="right-menu">
-         <div class="right-menu-content">
-            <!--search input-->
-            <form class="search-form">
-               <i class="bx bx-search"></i>
-               <input type="search" name="search-input" id="search-input" class="search-input" placeholder="Search Twitter" />
-            </form>
-            <!--trends section-->
-            <div class="trending-container">
-               <div class="trending-text-heading">
-                  <p class="trending-text">Trends for you</p>
+   <body>
+      <div class="container">
+         <!---left menu-->
+         <div class="left-menu">
+            <div class="left-menu-content">
+               <div class="twitter-logo-container">
+                  <i class="bx bxl-twitter twitter-logo"></i>
                </div>
-               <div class="trending-content">
-
-               </div>
-               <div class="show-more-footer">
-                  <p class="show-more-btn">Show more</p>
-               </div>
-            </div>
-            <!--who to follow section-->
-            <div class="suggestion-container">
-               <div class="suggestion-text-heading">
-                  <p class="suggestion-text">Who to follow</p>
-               </div>
-               <div class="suggestion-content">
-               </div>
-               <div class="show-more-footer">
-                  <p class="show-more-btn">Show more</p>
+               <ul class="itens">
+                  <!--Pc and big screen menu itens-->
+                  <li class="item big-screen">
+                     <a href="#" class="selected">
+                        <i class="bx bxs-home-circle"></i>
+                        <span>Home</span>
+                     </a>
+                  </li>
+                  <li class="item big-screen">
+                     <a href="#">
+                        <i class="bx bx-hash"></i>
+                        <span>Explore</span>
+                     </a>
+                  </li>
+                  <li class="item big-screen">
+                     <a href="#">
+                        <i class="bx bx-bell"></i>
+                        <span>Notifications</span>
+                     </a>
+                  </li>
+                  <li class="item big-screen">
+                     <a href="#">
+                        <i class="bx bx-envelope"></i>
+                        <span>Messages</span>
+                     </a>
+                  </li>
+                  <li class="item big-screen">
+                     <a href="#">
+                        <i class="bx bx-bookmark"></i>
+                        <span>Bookmarks</span>
+                     </a>
+                  </li>
+                  <li class="item big-screen">
+                     <a href="#">
+                        <i class="bx bx-message-square-detail"></i>
+                        <span>Lists</span>
+                     </a>
+                  </li>
+                  <li class="item big-screen">
+                     <a href="#">
+                        <i class="bx bx-user"></i>
+                        <span>Profile</span>
+                     </a>
+                  </li>
+                  <li class="item big-screen">
+                     <a href="#">
+                        <i class="bx bx-dots-horizontal-rounded"></i>
+                        <span>More</span>
+                     </a>
+                  </li>
+                  <!--Mobile icons-->
+                  <li class="item mobile-screen">
+                     <a href="#">
+                        <i class="bx bxs-home-circle selected"></i>
+                     </a>
+                  </li>
+                  <li class="item mobile-screen">
+                     <a href="#">
+                        <i class="bx bx-search"></i>
+                     </a>
+                  </li>
+                  <li class="item mobile-screen">
+                     <a href="#">
+                        <i class="bx bx-user"></i>
+                     </a>
+                  </li>
+                  <li class="item mobile-screen">
+                     <a href="#">
+                        <i class="bx bx-bell"></i>
+                     </a>
+                  </li>
+                  <li class="item mobile-screen">
+                     <a href="#">
+                        <i class="bx bx-envelope"></i>
+                     </a>
+                  </li>
+               </ul>
+               <!--tweet button-->
+               <div class="tweet-btn-container">
+                  <button class="tweet-btn" type="submit">Tweet</button>
                </div>
             </div>
          </div>
+         <!--right menu-->
+         <div class="right-menu">
+            <div class="right-menu-content">
+               <!--search input-->
+               <form class="search-form">
+                  <i class="bx bx-search"></i>
+                  <input
+                     type="search"
+                     name="search-input"
+                     id="search-input"
+                     class="search-input"
+                     placeholder="Search Twitter"
+                  />
+               </form>
+               <!--trends section-->
+               <div class="trending-container">
+                  <div class="trending-text-heading">
+                     <p class="trending-text">Trends for you</p>
+                  </div>
+                  <div class="trending-content"></div>
+                  <div class="show-more-footer">
+                     <p class="show-more-btn">Show more</p>
+                  </div>
+               </div>
+               <!--who to follow section-->
+               <div class="suggestion-container">
+                  <div class="suggestion-text-heading">
+                     <p class="suggestion-text">Who to follow</p>
+                  </div>
+                  <div class="suggestion-content"></div>
+                  <div class="show-more-footer">
+                     <p class="show-more-btn">Show more</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!--home content-->
+         <div class="home-container">
+            <div class="home-heading">
+               <p>Home</p>
+            </div>
+            <div class="tweet-area">
+               <textarea name="" id= rows="8" cols="40"></textarea>
+            </div>
+         </div>
       </div>
-   </div>
-   <script src="js/who-to-follow-content.js"></script>
-</body>
-
+      <script src="js/who-to-follow-content.js"></script>
+   </body>
 </html>
