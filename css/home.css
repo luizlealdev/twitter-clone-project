@@ -1,6 +1,6 @@
 .home-container {
    position: absolute;
-   left: calc(50% - 15%);
+   left: 45.5%;
    transform: translate(-50%, 0);
    width: 28rem;
 }
@@ -12,7 +12,8 @@
 
 @media screen and (max-width: 1050px) {
    .home-container {
-      left: 50%;
+      position: absolute;
+      left: calc(50% - 15%);
       transform: translate(-50%, 0);
    }
 }
