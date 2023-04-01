@@ -9,3 +9,10 @@
    font-weight: 600;
    background: red;
 }
+
+@media screen and (max-width: 1050px) {
+   .home-container {
+      left: 50%;
+      transform: translate(-50%, 0);
+   }
+}
