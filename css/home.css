@@ -1,8 +1,8 @@
 .home-container {
    position: absolute;
-   left: 25%;
-   width: 27rem;
-   display: none;
+   left: calc(50% - 15%);
+   transform: translate(-50%, 0);
+   width: 28rem;
 }
 
 .home-heading p {
