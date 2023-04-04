@@ -6,6 +6,7 @@
       <meta http-equiv="X-UA-Compatible" content="ie=edge" />
       <title>Twitter Clone | Home</title>
       <link rel="stylesheet" href="css/style.css" />
+      <link rel="stylesheet" href="css/darkmode-style.css" />
       <link rel="stylesheet" href="css/home.css" />
       <link rel="stylesheet" href="css/left-menu.css" />
       <link rel="stylesheet" href="css/right-menu.css" />
@@ -16,7 +17,7 @@
       <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
    </head>
 
-   <body>
+   <body class="body">
       <div class="container">
          <!---left menu-->
          <div class="left-menu">
@@ -68,13 +69,12 @@
                         <span>Profile</span>
                      </a>
                   </li>
-                  <li class="item big-screen">
+                  <li class="item big-screen mode-btn">
                      <a>
-                        <i class="bx bx-moon"></i>
-                        <span>Darkmode</span>
+                        <i class="bx icon-theme bx-moon"></i>
+                        <span class="mode-text">Darkmode</span>
                      </a>
                   </li>
-
                   <li class="item big-screen">
                      <a href="#">
                         <i class="bx bx-dots-horizontal-rounded"></i>
@@ -155,19 +155,70 @@
             <div class="home-heading">
                <p>Home</p>
             </div>
-            <div class="tweet-area">
-               <img
-                  class="tweet-profile-picture sugg-profile-picture"
-                  src="https://i.ibb.co/QY0zG6Z/twitter-avi-gender-balanced-figure.png"
-                  alt="Profile Picture"
-               />
-               <textarea
-                  name="tweet-textarea"
-                  class="tweet-textarea"
-               ></textarea>
+            <div class="home-content">
+               <!--tweet inputs area-->
+               <div class="tweet-area">
+                  <div class="profile-pictire-tweet">
+                     <!--profile picture-->
+                     <img
+                        class="tweet-profile-picture sugg-profile-picture"
+                        src="https://i.ibb.co/QY0zG6Z/twitter-avi-gender-balanced-figure.png"
+                        alt="Profile Picture"
+                     />
+                  </div>
+                  <div class="textareas">
+                     <!--tweet message textarea-->
+                     <textarea
+                        name="tweet-textarea"
+                        class="tweet-textarea"
+                        placeholder="What's happening?"
+                     ></textarea>
+                     <!--btns icons-->
+                     <div class="icons">
+                        <i class="bx bx-image"></i>
+                        <i class="bx bx-smile"></i>
+                     </div>
+                  </div>
+               </div>
             </div>
          </div>
       </div>
+      <script>
+         //var of elements
+         const body = document.querySelector(".body");
+         const toggleThemeBtn = document.querySelector(".mode-btn");
+         const modeText = document.querySelector(".mode-text");
+         const iconTheme = document.querySelector(".icon-theme");
+
+         //event listener
+         toggleThemeBtn.addEventListener("click", clickBtn);
+   
+         function clickBtn() {
+            if (localStorage.getItem("themeMode") === "dark") {
+               localStorage.setItem("themeMode", "light");
+            } else {
+               localStorage.setItem("themeMode", "dark");
+            }
+            changeTheme();
+         }
+
+         function changeTheme() {
+            if (localStorage.getItem("themeMode") === "dark") {
+               body.classList.add("darkmode");
+               modeText.innerHTML = "Lightmode";
+               iconTheme.classList.remove('bx-moon');
+               iconTheme.classList.add('bx-sun');
+               
+            } else {
+               body.classList.remove("darkmode");
+               modeText.innerHTML = "Darkmode";
+               iconTheme.classList.remove('bx-sun');
+               iconTheme.classList.add('bx-moon');
+            }
+         }
+
+         changeTheme();
+      </script>
       <script src="js/app.js"></script>
       <script src="js/who-to-follow-content.js"></script>
    </body>
