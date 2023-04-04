@@ -41,7 +41,7 @@ const fetchUsers = async () => {
                </div>
             </div>
          </div>
-         <button class="follow-btn ${userJson[i].following}">Follow</button>
+         <button class="follow-btn ${userJson[i].following}">${userJson[i].following}</button>
       </div>`;
    }
    console.log(userJson);
