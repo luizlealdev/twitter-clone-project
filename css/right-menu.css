@@ -3,14 +3,13 @@
    right: 0;
    width: 19rem;
    height: 100vh;
-   border-left: 2px solid var(--body-color-2);
    padding: 1rem 2.1rem 1rem 1.2em;
    font-size: 0.975rem;
    overflow-y: auto;
    white-space: nowrap;
-   background: var(--body-color);
 }
 
+/*search input*/
 .search-form {
    background: #e6ecef;
    width: 100%;
@@ -23,16 +22,18 @@
    border-radius: 50px;
 }
 
+/*form for search*/
 .search-form i {
    margin-left: 15px;
    font-size: 15px;
    color: #93a1ac;
 }
 
-::placeholder {
+.search-input::placeholder {
    color: #93a1ac;
 }
 
+/*input search*/
 .search-input {
    width: 85%;
    border: none;
@@ -41,6 +42,11 @@
    font-size: var(--font-size-normal);
 }
 
+.search-input::-webkit-search-cancel-button {
+   background: url(https://pro.fontawesome.com/releases/v5.10.0/svgs/solid/times-circle.svg) no-repeat 50% 50%;
+}
+
+/*trending section*/
 .trending-container,
 .suggestion-container {
    background: #f5f8fa;
@@ -54,7 +60,7 @@
 
 .trending-text-heading,
 .suggestion-text-heading {
-   font-size: 1.2rem;
+   font-size: 1.25rem;
    font-weight: 900;
    padding: 0.6rem 0.8rem;
    width: 90.5%;
@@ -85,11 +91,14 @@
    gap: 5px;
 }
 
+/*profile picture*/
 .sugg-profile-picture {
    width: 45px;
    border-radius: 50px;
+   display: flex;
 }
 
+/*profile name*/
 .sugg-name {
    font-weight: bold;
 }
@@ -103,16 +112,18 @@
    cursor: pointer;
    padding: 0 10px;
    font-weight: bold;
+   height: 40px !important;
    border-radius: 50px;
    background: transparent;
    color: var(--main-color);
    border: 2px solid var(--main-color);
 }
 
-/*.true {
+/*following btn in right menu*/
+.Following {
    content: 'following';
    border-radius: 50px;
    background: var(--main-color);
    color: #fff;
    border: 2px solid var(--main-color);
-}*/
+}
