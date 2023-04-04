@@ -1,19 +1,71 @@
 .home-container {
    position: absolute;
    left: 45.5%;
+   width: 36rem;
+   height: 100vh;
    transform: translate(-50%, 0);
-   width: 32rem;
+   border-left: 2px solid var(--body-color-2);
+   border-right: 2px solid var(--body-color-2);
+}
+
+.home-container .home-content {
+   padding: 8px 13px;
 }
 
 .home-heading p {
-   font-weight: 600;
-   background: red;
+   padding: 10px 12px;
+   border-bottom: 2px solid var(--body-color-2);
+   margin-bottom: 8px;
+   font-weight: 700;
+   font-size: 1.3rem;
+   /*background: red;*/
+}
+
+.tweet-area {
+   display: flex;
+   width: 100%;
+}
+
+/*text area div*/
+.textareas {
+   display: flex;
+   flex-direction: column;
+   width: 100vw;
+   padding: 5px;
+}
+
+/*tweet textarea*/
+.tweet-textarea {
+   display: flex;
+   font-family: Sans-Serif;
+   font-size: 1rem;
+   width: 100%;
+   height: 2.9rem;
+   padding: 8px;
+   border: none;
+   outline: none;
+   background: transparent;
+}
+
+.tweet-textarea::placeholder {
+   color: #93a1ac;
+}
+
+.icons {
+   margin-left: 8px;
+}
+
+/*tweet icons btn*/
+.icons .bx {
+   color: var(--main-color);
+   cursor: pointer;
+   font-size: 1.25rem;
 }
 
 @media screen and (max-width: 1050px) {
    .home-container {
       position: absolute;
-      left: calc(50% - 15%);
+      left: calc(50% - 14%);
       transform: translate(-50%, 0);
    }
 }
