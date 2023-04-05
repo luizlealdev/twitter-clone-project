@@ -74,7 +74,7 @@
    bottom: 4rem;
 }
 
-@media screen and (max-width: 860px) {
+@media screen and (max-width: 884px) {
    .left-menu {
       position: fixed;
       z-index: 100 !important;
