@@ -190,9 +190,13 @@
          const modeText = document.querySelector(".mode-text");
          const iconTheme = document.querySelector(".icon-theme");
 
+         if (localStorage.getItem("themeMode") === null) {
+            localStorage.setItem("themeMode", "light");
+         }
+
          //event listener
          toggleThemeBtn.addEventListener("click", clickBtn);
-   
+
          function clickBtn() {
             if (localStorage.getItem("themeMode") === "dark") {
                localStorage.setItem("themeMode", "light");
@@ -206,14 +210,13 @@
             if (localStorage.getItem("themeMode") === "dark") {
                body.classList.add("darkmode");
                modeText.innerHTML = "Lightmode";
-               iconTheme.classList.remove('bx-moon');
-               iconTheme.classList.add('bx-sun');
-               
+               iconTheme.classList.remove("bx-moon");
+               iconTheme.classList.add("bx-sun");
             } else {
                body.classList.remove("darkmode");
                modeText.innerHTML = "Darkmode";
-               iconTheme.classList.remove('bx-sun');
-               iconTheme.classList.add('bx-moon');
+               iconTheme.classList.remove("bx-sun");
+               iconTheme.classList.add("bx-moon");
             }
          }
 
