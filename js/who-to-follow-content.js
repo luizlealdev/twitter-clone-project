@@ -2,7 +2,7 @@ const suggestionContent = document.querySelector(".suggestion-content");
 
 const fetchUsers = async () => {
    const userData = await fetch(
-      `https://raw.githubusercontent.com/luiz-developer/twitter-clone-project/main/js/users-suggestion.json`
+      `https://raw.githubusercontent.com/luiz-developer/twitter-clone-project/main/js/json/users-suggestion.json`
    );
    const userJson = await userData.json();
 
