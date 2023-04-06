@@ -7,6 +7,7 @@
    font-size: 1.3rem;
    overflow-y: auto;
    white-space: nowrap;
+   background: var(--body-color);
 }
 
 .left-menu-content {
