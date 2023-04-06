@@ -19,7 +19,7 @@
    /*dark mode colors*/
    --dark-body-color: #000;
    --dark-main-color: #1ea1f2;
-   --dark-body-color-2: #2F3336;
+   --dark-body-color-2: #2f3336;
    --dark-text-color: #fff;
 
    /*font size*/
@@ -34,7 +34,7 @@
 
 body {
    background: var(--body-color);
-   color: var();
+   color: var(--text-color);
    font-family: "Roboto", sans-serif;
 }
 
