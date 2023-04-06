@@ -106,6 +106,9 @@
 }
 
 @media screen and (max-width: 768px) {
+   * {
+      box-sizing: border-box;
+   }
    .home-container {
       width: 100vw;
       border-left: none;
