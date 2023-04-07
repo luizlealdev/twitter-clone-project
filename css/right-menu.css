@@ -129,7 +129,7 @@
    border: 2px solid var(--main-color);
 }
 
-@media screen and (max-width: 884px) {
+@media screen and (max-width: 970px) {
    .right-menu {
       display: none;
    }

@@ -94,10 +94,25 @@
    display: none;
 }
 
-@media screen and (max-width: 884px) {
+@media screen and (max-width: 1050px) {
+   .home-container {
+      position: absolute;
+      left: calc(50% - 14%);
+      transform: translate(-50%, 0);
+   }
+}
+
+@media screen and (max-width: 970px) {
    .home-container {
       width: 36rem;
       height: 100vh;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+   }
+
+   .home-heading {
+      -webkit-margin-before: 1.5rem;
    }
 
    .home-heading p {
@@ -110,24 +125,16 @@
    }
 
    .menu-mobile-profile-pic {
-      width: 38px;
+      width: 35px;
       border-radius: 50px;
    }
 
    .twitter-heading-logo {
       position: absolute;
       color: var(--main-color);
-      font-size: 1.6rem;
-      top: 13px;
+      font-size: 1.7rem;
+      -webkit-margin-before: 5px;
       left: 50%;
-      transform: translateX(-50%);
-   }
-}
-
-@media screen and (max-width: 1050px) {
-   .home-container {
-      position: absolute;
-      left: calc(50% - 14%);
       transform: translate(-50%, 0);
    }
 }
