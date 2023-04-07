@@ -90,10 +90,37 @@
    border: 2px solid var(--main-color);
 }
 
+.menu-open-and-logo {
+   display: none;
+}
+
 @media screen and (max-width: 884px) {
    .home-container {
       width: 36rem;
       height: 100vh;
+   }
+
+   .home-heading p {
+      font-size: 1.2rem;
+   }
+
+   .menu-open-and-logo {
+      padding: 8px;
+      display: flex;
+   }
+
+   .menu-mobile-profile-pic {
+      width: 38px;
+      border-radius: 50px;
+   }
+
+   .twitter-heading-logo {
+      position: absolute;
+      color: var(--main-color);
+      font-size: 1.6rem;
+      top: 13px;
+      left: 50%;
+      transform: translateX(-50%);
    }
 }
 
