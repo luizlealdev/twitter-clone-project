@@ -107,12 +107,13 @@
       width: 36rem;
       height: 100vh;
       left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
+      top: 0;
+      transform: translate(-50%, 0);
    }
 
-   .home-heading {
-      -webkit-margin-before: 1.5rem;
+   .home-heading p {
+      /*-webkit-margin-before: 1.5rem;*/
+      border-bottom: none !important;
    }
 
    .home-heading p {
@@ -122,6 +123,7 @@
    .menu-open-and-logo {
       padding: 8px;
       display: flex;
+      border-bottom: 2px solid var(--body-color-2);
    }
 
    .menu-mobile-profile-pic {
@@ -132,8 +134,8 @@
    .twitter-heading-logo {
       position: absolute;
       color: var(--main-color);
-      font-size: 1.7rem;
-      -webkit-margin-before: 5px;
+      font-size: 1.8rem;
+      top: 10px;
       left: 50%;
       transform: translate(-50%, 0);
    }
@@ -144,11 +146,12 @@
       box-sizing: border-box;
    }
    .home-container {
+      position: static;
       width: 100vw;
       border-left: none;
       border-right: none;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
+      left: none;
+      top: none;
+      transform: none;
    }
 }

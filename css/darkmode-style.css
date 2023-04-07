@@ -10,7 +10,7 @@ body.darkmode .home-container {
    border-left: 2px solid var(--dark-body-color-2);
    border-right: 2px solid var(--dark-body-color-2);
 }
-body.darkmode .left-menu  {
+body.darkmode .left-menu {
    background: var(--dark-body-color);
    border-top: 2px solid var(--dark-body-color-2);
 }
@@ -41,4 +41,7 @@ body.darkmode .left-menu .selected {
 }
 body.darkmode .left-menu .tweet-btn {
    box-shadow: 1px 5px 15px var(--dark-body-color-2);
+}
+body.darkmode .menu-open-and-logo {
+   border: 2px solid var(--dark-body-color-2);
 }
