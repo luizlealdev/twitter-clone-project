@@ -48,6 +48,11 @@ a:hover:not(.item a) {
    text-decoration: underline;
 }
 
+.container {
+   width: 100vw;
+   height: 100vh;
+}
+
 .selected {
    color: var(--main-color);
 }

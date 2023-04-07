@@ -104,11 +104,13 @@
 
 @media screen and (max-width: 970px) {
    .home-container {
+      position: static;
+      margin: 0 50%;
       width: 36rem;
       height: 100vh;
-      left: 50%;
+      /*left: 50%;
       top: 0;
-      transform: translate(-50%, 0);
+      transform: translate(-50%, 0);*/
    }
 
    .home-heading p {
@@ -148,10 +150,11 @@
    .home-container {
       position: static;
       width: 100vw;
-      border-left: none;
-      border-right: none;
+      border-left: none !important;
+      border-right: none !important;
       left: none;
       top: none;
       transform: none;
+      margin: 0;
    }
 }
