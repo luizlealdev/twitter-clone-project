@@ -43,5 +43,9 @@ body.darkmode .left-menu .tweet-btn {
    box-shadow: 1px 5px 15px var(--dark-body-color-2);
 }
 body.darkmode .menu-open-and-logo {
-   border: 2px solid var(--dark-body-color-2);
+   border-bottom: 2px solid var(--dark-body-color-2);
+}
+body.darkmode .tweet{
+   border-top: 2px solid var(--dark-body-color-2);
+   border-bottom: 2px solid var(--dark-body-color-2);
 }

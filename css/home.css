@@ -32,6 +32,7 @@
    flex-direction: column;
    width: 100vw;
    padding: 5px;
+   margin-bottom: 10px;
 }
 
 /*tweet textarea*/
@@ -56,6 +57,11 @@
    position: absolute;
    right: 10px;
    bottom: 10px;
+}
+
+.tweet-profile-picture {
+   border-radius: 50px;
+   width: 40px;
 }
 
 .t-area-div {
@@ -92,6 +98,48 @@
 
 .menu-open-and-logo {
    display: none;
+}
+
+.tweet {
+   /*display: flex;*/
+   padding: 10px 0;
+   position: relative;
+   border-top: 2px solid var(--body-color-2);
+   border-bottom: 2px solid var(--body-color-2);
+}
+
+.tweet-profile-infors {
+   display: flex;
+   flex-direction: row;
+   gap: 8px;
+}
+
+.tweet-profile-name {
+   display: flex;
+   gap: 4px;
+   font-size: 1.15rem;
+}
+
+.tweet-name {
+   font-weight: bold;
+   margin: 7px 0 0 39px;
+}
+.tweet-username,
+.dot-style,
+.date {
+   font-size: 17px;
+   color: #6f7d87;
+   margin-top: 7px;
+}
+
+.user-tweet-profile-picture img {
+   display: flex;
+   position: absolute;
+}
+
+.tweet-text p {
+   padding: 0 8px 10px 47px;
+   font-size: 1rem;
 }
 
 @media screen and (max-width: 1050px) {
