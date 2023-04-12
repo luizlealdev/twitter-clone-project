@@ -75,6 +75,10 @@
    bottom: 4rem;
 }
 
+.feather-icon {
+   width: 55%;
+}
+
 @media screen and (max-width: 970px) {
    .left-menu {
       position: fixed;
