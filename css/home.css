@@ -137,6 +137,25 @@
    position: absolute;
 }
 
+.tweet-infors {
+   display: flex;
+}
+
+.user-tweet-user::placeholder,
+.user-tweet-username::placeholder{
+   color: #93a1ac;
+}
+.user-tweet-user,
+.user-tweet-username{
+   font-size: 1rem;
+   margin-left: 7px;
+   width: 50%;
+   border: none;
+   border-bottom: 1.5px solid var(--body-color-2);
+   background: transparent;
+   outline: none;
+}
+
 .tweet-text p {
    padding: 0 8px 10px 47px;
    font-size: 1rem;

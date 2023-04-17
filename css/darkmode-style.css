@@ -49,3 +49,7 @@ body.darkmode .tweet{
    border-top: 2px solid var(--dark-body-color-2);
    border-bottom: 2px solid var(--dark-body-color-2);
 }
+body.darkmode .user-tweet-user,
+body.darkmode .user-tweet-username {
+   border-bottom: 1.5px solid var(--dark-body-color-2)
+}
