@@ -141,11 +141,11 @@
    display: flex;
 }
 
-.user-tweet-user::placeholder,
+.user-tweet-name::placeholder,
 .user-tweet-username::placeholder{
    color: #93a1ac;
 }
-.user-tweet-user,
+.user-tweet-name,
 .user-tweet-username{
    font-size: 1rem;
    margin-left: 7px;
