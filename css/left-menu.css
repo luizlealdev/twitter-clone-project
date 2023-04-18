@@ -67,6 +67,29 @@
    box-shadow: 1px 5px 15px var(--body-color-2);
    font-weight: bold;
    cursor: pointer;
+   display: flex;
+   justify-content: center;
+   align-content: center;
+   align-items: center;
+}
+.mobile-tweet-btn {
+   display: none;
+   position: fixed;
+   bottom: 4.5rem;
+   right: 1rem;
+   width: 55px;
+   height: 55px;
+   background: var(--main-color);
+   border-radius: 50px;
+   border: none;
+   cursor: pointer;
+   justify-content: center;
+   align-content: center;
+   align-items: center;
+   
+}
+.mobile-tweet-btn img {
+   width: 44%;
 }
 
 .mode-btn {
@@ -77,6 +100,7 @@
 
 .feather-icon {
    width: 55%;
+   display: none;
 }
 
 @media screen and (max-width: 970px) {
@@ -94,11 +118,11 @@
       border-right: none;
       border-top: 2px solid var(--body-color-2);
    }
-
+   
    .left-menu-content {
       margin-left: 0;
    }
-
+   
    .itens {
       display: flex;
       flex-direction: row;
@@ -106,22 +130,26 @@
       width: 100%;
       height: 100%;
    }
-
+   
    .itens span,
    .tweet-btn {
       display: none;
    }
-
+   
    .twitter-logo {
       position: absolute;
       left: -100px;
    }
-
+   
    .mobile-screen {
       opacity: 1;
       position: static;
    }
-
+   
+   .mobile-tweet-btn {
+      display: flex;
+   }
+   
    .big-screen {
       position: absolute;
       opacity: 0;
@@ -133,11 +161,20 @@
       width: 2.5rem;
       font-size: 1.6rem;
    }
-
+   
+   .feather-icon {
+      display: block;
+   }
+   
+   
+   .tweet-btn span {
+      display: none;
+   }
+   
    .left-menu-content {
       margin-left: 8px;
    }
-
+   
    .itens span {
       display: none;
    }

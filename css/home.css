@@ -139,6 +139,11 @@
 
 .tweet-infors {
    display: flex;
+   margin-left: 5px;
+}
+.tweet-infors div {
+   width: 100%;
+   display: flex;
 }
 
 .user-tweet-name::placeholder,
@@ -147,9 +152,10 @@
 }
 .user-tweet-name,
 .user-tweet-username{
+   padding: 2px 4px;
    font-size: 1rem;
-   margin-left: 7px;
-   width: 50%;
+   margin-right: 7px;
+   width: 100%;
    border: none;
    border-bottom: 1.5px solid var(--body-color-2);
    background: transparent;
