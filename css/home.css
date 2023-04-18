@@ -122,7 +122,7 @@
 
 .tweet-name {
    font-weight: bold;
-   margin: 7px 0 0 39px;
+   margin: 5px 0 0 50px;
 }
 .tweet-username,
 .dot-style,
@@ -132,9 +132,10 @@
    margin-top: 7px;
 }
 
-.user-tweet-profile-picture img {
+.ab-profile {
    display: flex;
    position: absolute;
+   margin-left: 0.85rem;
 }
 
 .tweet-infors {
@@ -163,11 +164,13 @@
 }
 
 .tweet-text p {
+   margin-left: 0.7rem;
    padding: 0 8px 10px 47px;
    font-size: 1rem;
 }
 
 .tweet-icons {
+   margin-left: 0.7rem;
    padding: 0 8px 10px 47px;
    font-size: 1.2rem;
    display: flex;

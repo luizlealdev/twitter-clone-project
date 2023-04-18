@@ -178,10 +178,10 @@
                   <form method="POST" action="db/tweet.php">
                      <div class="t-area-div">
                         <div class="tweet-infors">
-                           <input type="text" class="user-tweet-name" placeholder="Name" maxlength="35" />
+                           <input type="text" name="user-tweet-name" class="user-tweet-name" placeholder="Name" maxlength="35" />
                            <div class="">
                               <span>@</span>
-                              <input type="text" class="user-tweet-username" placeholder="Username" maxlength="15" />
+                              <input type="text" name="user-tweet-username" class="user-tweet-username" placeholder="Username" maxlength="15" />
                            </div>
                         </div>
                         <textarea name="tweet-textarea" class="tweet-textarea" maxlength="280"
@@ -209,7 +209,7 @@
             <div class="tweet">
                <div class="tweet-profile-infors">
                   <div class="user-tweet-profile-picture">
-                     <img class="tweet-profile-picture" src="img/defalt-avatar.png" alt="Profile Picture" />
+                     <img class="ab-profile tweet-profile-picture" src="img/defalt-avatar.png" alt="Profile Picture" />
                   </div>
                   <div class="tweet-profile-name">
                      <p class="tweet-name">
