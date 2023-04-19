@@ -48,7 +48,10 @@
    background: transparent;
 }
 
-.tweet-textarea::placeholder {
+.tweet-textarea::placeholder,
+.user-tweet-name::placeholder,
+.user-tweet-username::placeholder,
+.user-profile-picture::placeholder {
    color: #93a1ac;
 }
 
@@ -100,18 +103,30 @@
    display: none;
 }
 
+.tweet-container {
+   padding: 0 1rem 4rem 0;
+}
+
 .tweet {
    /*display: flex;*/
    padding: 10px 0;
    position: relative;
-   border-top: 2px solid var(--body-color-2);
-   border-bottom: 2px solid var(--body-color-2);
+   border-top: 1px solid var(--body-color-2);
+}
+
+.tweet:nth-last-child(1){
+   margin-bottom: 5rem;
+   border-bottom: 1px solid var(--body-color-2);
 }
 
 .tweet-profile-infors {
    display: flex;
    flex-direction: row;
    gap: 8px;
+}
+
+.tweet-infors div span {
+   color: #6f7d87;
 }
 
 .tweet-profile-name {
@@ -146,13 +161,13 @@
    width: 100%;
    display: flex;
 }
-
-.user-tweet-name::placeholder,
-.user-tweet-username::placeholder{
-   color: #93a1ac;
+.user-profile-picture {
+   margin: 5px 0 0 3px;
 }
+
 .user-tweet-name,
-.user-tweet-username{
+.user-tweet-username,
+.user-profile-picture {
    padding: 2px 4px;
    font-size: 1rem;
    margin-right: 7px;

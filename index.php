@@ -178,14 +178,17 @@
                   <form method="POST" action="db/tweet.php">
                      <div class="t-area-div">
                         <div class="tweet-infors">
-                           <input type="text" name="user-tweet-name" class="user-tweet-name" placeholder="Name" maxlength="35" />
+                           <input type="text" name="user-tweet-name" class="user-tweet-name" placeholder="Name" maxlength="35" required/>
                            <div class="">
                               <span>@</span>
-                              <input type="text" name="user-tweet-username" class="user-tweet-username" placeholder="Username" maxlength="15" />
+                              <input type="text" name="user-tweet-username" class="user-tweet-username" placeholder="Username" maxlength="15" required/>
                            </div>
                         </div>
+                        <div class="">
+                           <input type="text" class="user-profile-picture" name="user-profile-picture" placeholder="Profile picture image link (not obligatory)"/>
+                        </div>
                         <textarea name="tweet-textarea" class="tweet-textarea" maxlength="280"
-                           placeholder="What's happening?"></textarea>
+                           placeholder="What's happening?" required ></textarea>
                         <div class="tweet-caracters-infor">
                            <pre class="caracter-infor">0/200</pre>
                         </div>
@@ -206,40 +209,38 @@
             </div>
          </div>
          <div class="tweet-container">
-            <div class="tweet">
-               <div class="tweet-profile-infors">
-                  <div class="user-tweet-profile-picture">
-                     <img class="ab-profile tweet-profile-picture" src="img/defalt-avatar.png" alt="Profile Picture" />
-                  </div>
-                  <div class="tweet-profile-name">
-                     <p class="tweet-name">
-                        Mateus jr
-                     </p>
-                     <p class="tweet-username">
-                        @macho
-                     </p>
-                     <p class="dot-style">
-                        •
-                     </p>
-                     <p class="date">
-                        3m
-                     </p>
-                  </div>
-               </div>
-               <div class="tweet-text">
-                  <p>
-                     lorem ipsun dolor ad labore magna officia tempor ut
-                     qui aute laborum nulla id irure qui commodo deserunt
-                     pariatur eu ut elit aliqua pariatur voluptate et eu
-                  </p>
-               </div>
-               <div class="tweet-icons">
-                  <i class='bx bx-comment'></i>
-                  <i class='bx bx-repost'></i>
-                  <i class='bx bx-heart'></i>
-                  <i class="bx bx-bookmark"></i>
-               </div>
-            </div>
+            <?php
+               require __DIR__ . '/vendor/autoload.php'; // carrega o SDK do Back4App
+               /* strlen($str1) substr($texto, 0, 16)*/
+               use Parse\ParseClient;
+               use Parse\ParseObject;
+               use Parse\ParseQuery;
+
+               // credenciais do seu aplicativo
+               ParseClient::initialize('UdrdFpwyKGjl1MM5qiqXwqvmbfASxbq3WRswwrPy', '1iKwPZzlntMhisQ41mDR9GeGO4ERhTiqAOQKVrN4', 'bvlkmF1cGMfOkPe3Gshtun9J0wg8TzzzVtZ5QcLj');
+               ParseClient::setServerURL('https://parseapi.back4app.com/', '/parse');
+
+               // conexão com a sua database
+               $query = new ParseQuery('Tweet');
+               $query->descending('createdAt');
+               $results = $query->find();
+
+               // exibição das informações na página
+               foreach ($results as $object) {
+                  
+                  $profile_pic_url = $object->get('image'); // Verifica se a imagem está funcionando 
+                  $profile_pic_info = @getimagesize($profile_pic_url); 
+                  
+                  if ($profile_pic_info !== false) { 
+                     // A imagem está funcionando, então altera seu src 
+                     $sucess_image_url = $profile_pic_url; 
+                  } else {
+                     // A imagem não está funcionando, então define um src alternativo 
+                     $sucess_image_url = 'img/defalt-avatar.png'; 
+                  }
+                  echo '<div class="tweet" id="'. $object->get('tweet_id') .'"><div class="tweet-profile-infors"><div class="user-tweet-profile-picture"><img class="ab-profile tweet-profile-picture" src="'.$sucess_image_url.'" alt="Profile Picture" /></div><div class="tweet-profile-name"><p class="tweet-name">'.substr($object->get('name'), 0, 16).'</p><p class="tweet-username">@'. substr($object->get('username'), 0, 16).'</p><p class="dot-style">•</p><p class="date">3m</p></div></div><div class="tweet-text"><p>'. $object->get('tweet')  .'</p></div><div class="tweet-icons"><i class="bx bx-comment"></i><i class="bx bx-repost"></i><i class="bx bx-heart"></i><i class="bx bx-bookmark"></i></div></div>';
+               }
+            ?>
          </div>
       </div>
    </div>
@@ -248,45 +249,36 @@
          <img class="feather-icon" src="img/pena.svg" alt="" />
       </button>
    </a>
-   </div>
    <script>
       //var of elements
-const body = document.querySelector(".body");
-const toggleThemeBtn = document.querySelector(".mode-btn");
-const modeText = document.querySelector(".mode-text");
-const iconTheme = document.querySelector(".icon-theme");
+      const body = document.querySelector(".body");
+      const toggleThemeBtn = document.querySelector(".mode-btn");
+      const modeText = document.querySelector(".mode-text");
+      const iconTheme = document.querySelector(".icon-theme");
 
-if (localStorage.getItem("themeMode") === null) {
-localStorage.setItem("themeMode", "light");
-}
+      if (localStorage.getItem("themeMode") === null) {
+         localStorage.setItem("themeMode", "light");
+      }
 
-//event listener
-toggleThemeBtn.addEventListener("click", clickBtn);
+      //event listener
+      toggleThemeBtn.addEventListener("click", clickBtn);
 
-function clickBtn() {
-if (localStorage.getItem("themeMode") === "dark") {
-localStorage.setItem("themeMode", "light");
-} else {
-localStorage.setItem("themeMode", "dark");
-}
-changeTheme();
-}
+         
+      function changeTheme() {
+         if (localStorage.getItem("themeMode") === "dark") {
+            body.classList.add("darkmode");
+            modeText.innerHTML = "Lightmode";
+            iconTheme.classList.remove("bx-moon");
+            iconTheme.classList.add("bx-sun");
+         } else {
+            body.classList.remove("darkmode");
+            modeText.innerHTML = "Darkmode";
+            iconTheme.classList.remove("bx-sun");
+            iconTheme.classList.add("bx-moon");
+         }
+      }
 
-function changeTheme() {
-if (localStorage.getItem("themeMode") === "dark") {
-body.classList.add("darkmode");
-modeText.innerHTML = "Lightmode";
-iconTheme.classList.remove("bx-moon");
-iconTheme.classList.add("bx-sun");
-} else {
-body.classList.remove("darkmode");
-modeText.innerHTML = "Darkmode";
-iconTheme.classList.remove("bx-sun");
-iconTheme.classList.add("bx-moon");
-}
-}
-
-changeTheme();
+      changeTheme();
    </script>
    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>

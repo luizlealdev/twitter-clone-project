@@ -45,9 +45,11 @@ body.darkmode .left-menu .tweet-btn {
 body.darkmode .menu-open-and-logo {
    border-bottom: 2px solid var(--dark-body-color-2);
 }
-body.darkmode .tweet{
-   border-top: 2px solid var(--dark-body-color-2);
-   border-bottom: 2px solid var(--dark-body-color-2);
+body.darkmode .tweet {
+   border-top: 1px solid var(--dark-body-color-2);
+}
+body.darkmode .tweet:nth-last-child(1) {
+   border-bottom: 1px solid var(--dark-body-color-2);
 }
 body.darkmode .user-tweet-name,
 body.darkmode .user-tweet-username {
