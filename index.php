@@ -210,22 +210,23 @@
          </div>
          <div class="tweet-container">
             <?php
-               require __DIR__ . '/vendor/autoload.php'; // carrega o SDK do Back4App
-               /* strlen($str1) substr($texto, 0, 16)*/
+               require __DIR__ . '/vendor/autoload.php'; 
+               //back4app sdk
+               
                use Parse\ParseClient;
                use Parse\ParseObject;
                use Parse\ParseQuery;
 
-               // credenciais do seu aplicativo
+               // app keys
                ParseClient::initialize('UdrdFpwyKGjl1MM5qiqXwqvmbfASxbq3WRswwrPy', '1iKwPZzlntMhisQ41mDR9GeGO4ERhTiqAOQKVrN4', 'bvlkmF1cGMfOkPe3Gshtun9J0wg8TzzzVtZ5QcLj');
                ParseClient::setServerURL('https://parseapi.back4app.com/', '/parse');
 
-               // conexão com a sua database
+               //db conection
                $query = new ParseQuery('Tweet');
                $query->descending('createdAt');
                $results = $query->find();
 
-               // exibição das informações na página
+               //show tweets
                foreach ($results as $object) {
                   
                   $profile_pic_url = $object->get('image'); // Verifica se a imagem está funcionando 
