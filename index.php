@@ -239,7 +239,14 @@
                      // A imagem não está funcionando, então define um src alternativo 
                      $sucess_image_url = 'img/defalt-avatar.png'; 
                   }
-                  echo '<div class="tweet" id="'. $object->get('tweet_id') .'"><div class="tweet-profile-infors"><div class="user-tweet-profile-picture"><img class="ab-profile tweet-profile-picture" src="'.$sucess_image_url.'" alt="Profile Picture" /></div><div class="tweet-profile-name"><p class="tweet-name">'.substr($object->get('name'), 0, 16).'</p><p class="tweet-username">@'. substr($object->get('username'), 0, 16).'</p><p class="dot-style">•</p><p class="date">3m</p></div></div><div class="tweet-text"><p>'. $object->get('tweet')  .'</p></div><div class="tweet-icons"><i class="bx bx-comment"></i><i class="bx bx-repost"></i><i class="bx bx-heart"></i><i class="bx bx-bookmark"></i></div></div>';
+                  
+                  if (strlen($object->get('name')) >= 10) {
+                     $new_name = substr($object->get('name'), 0, 8). '...';
+                  } else {
+                     $new_name = $object->get('name');
+                  }
+                  
+                  echo '<div class="tweet" id="'. $object->get('tweet_id') .'"><div class="tweet-profile-infors"><div class="user-tweet-profile-picture"><img class="ab-profile tweet-profile-picture" src="'.$sucess_image_url.'" alt="Profile Picture" /></div><div class="tweet-profile-name"><p class="tweet-name">'.$new_name.'</p><p class="tweet-username">@'. substr($object->get('username'), 0, 16).'</p><p class="dot-style">•</p><p class="date">'.$object->get('date').'</p></div></div><div class="tweet-text"><p>'. $object->get('tweet')  .'</p></div><div class="tweet-icons"><i class="bx bx-comment"></i><i class="bx bx-repost"></i><i class="bx bx-heart"></i><i class="bx bx-bookmark"></i></div></div>';
                }
             ?>
          </div>
