@@ -185,7 +185,7 @@
                            </div>
                         </div>
                         <div class="">
-                           <input type="text" class="user-profile-picture" name="user-profile-picture" placeholder="Profile picture image link (not obligatory)"/>
+                           <input type="text" onchange="cum()" class="user-profile-picture" name="user-profile-picture" placeholder="Profile picture image link (not obligatory)"/>
                         </div>
                         <textarea name="tweet-textarea" class="tweet-textarea" maxlength="280"
                            placeholder="What's happening?" required ></textarea>
@@ -269,7 +269,7 @@
       }
 
       //event listener
-      toggleThemeBtn.addEventListener("click", clickBtn);
+      //toggleThemeBtn.addEventListener("click", clickBtn);
 
          
       function changeTheme() {

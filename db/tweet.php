@@ -12,7 +12,7 @@
    $tweet = new ParseObject("Tweet");
    $tweet->set("tweet_id", $tweet_id);
    $tweet->set("name", $user_name);
-   $tweet->set("username", $user_username);
+   $tweet->set("username", strtolower($user_username));
    $tweet->set("tweet", $user_tweet);
    $tweet->set("image", $user_profile_picture);
    $tweet->set("date", date("Y/m/d"));
