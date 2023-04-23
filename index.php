@@ -16,7 +16,7 @@
    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 </head>
 
-<body class="body">
+<body class="body darkmode">
    <div class="container">
       <!---left menu-->
       <div class="left-menu">
@@ -80,32 +80,6 @@
                      <span class="mode-text">Darkmode</span>
                   </a>
                </li>
-               <!--Mobile icons-->
-               <li class="item mobile-screen">
-                  <a href="#">
-                     <i class="bx bxs-home-circle selected"></i>
-                  </a>
-               </li>
-               <li class="item mobile-screen">
-                  <a href="#">
-                     <i class="bx bx-search"></i>
-                  </a>
-               </li>
-               <li class="item mobile-screen">
-                  <a href="#">
-                     <i class="bx bx-user"></i>
-                  </a>
-               </li>
-               <li class="item mobile-screen">
-                  <a href="#">
-                     <i class="bx bx-bell"></i>
-                  </a>
-               </li>
-               <li class="item mobile-screen">
-                  <a href="#">
-                     <i class="bx bx-envelope"></i>
-                  </a>
-               </li>
             </ul>
             <!--tweet button-->
             <div class="tweet-btn-container">
@@ -115,6 +89,36 @@
                </button>
             </div>
          </div>
+      </div>
+      <div class="menu-bottom-mobile">
+         <ul>
+            <!--Mobile icons-->
+            <li class="mobie-item">
+               <a href="#">
+                  <i class="bx bxs-home-circle selected"></i>
+               </a>
+            </li>
+            <li class="mobile-item">
+               <a href="#">
+                  <i class="bx bx-search"></i>
+               </a>
+            </li>
+            <li class="mobile-item">
+               <a href="#">
+                  <i class="bx bx-user"></i>
+               </a>
+            </li>
+            <li class="mobile-item">
+               <a href="#">
+                  <i class="bx bx-bell"></i>
+               </a>
+            </li>
+            <li class="mobile-item">
+               <a href="#">
+                  <i class="bx bx-envelope"></i>
+               </a>
+            </li>
+         </ul>
       </div>
       <!--right menu-->
       <div class="right-menu">
@@ -178,17 +182,20 @@
                   <form method="POST" action="db/tweet.php">
                      <div class="t-area-div">
                         <div class="tweet-infors">
-                           <input type="text" name="user-tweet-name" class="user-tweet-name" placeholder="Name" maxlength="35" required/>
+                           <input type="text" name="user-tweet-name" class="user-tweet-name" placeholder="Name"
+                              maxlength="35" required />
                            <div class="">
                               <span>@</span>
-                              <input type="text" name="user-tweet-username" class="user-tweet-username" placeholder="Username" maxlength="15" required/>
+                              <input type="text" name="user-tweet-username" class="user-tweet-username"
+                                 placeholder="Username" maxlength="15" required />
                            </div>
                         </div>
                         <div class="">
-                           <input type="text" onchange="cum()" class="user-profile-picture" name="user-profile-picture" placeholder="Profile picture image link (not obligatory)"/>
+                           <input type="text" onchange="cum()" class="user-profile-picture" name="user-profile-picture"
+                              placeholder="Profile picture image link (not obligatory)" />
                         </div>
                         <textarea name="tweet-textarea" class="tweet-textarea" maxlength="280"
-                           placeholder="What's happening?" required ></textarea>
+                           placeholder="What's happening?" required></textarea>
                         <div class="tweet-caracters-infor">
                            <pre class="caracter-infor">0/200</pre>
                         </div>
@@ -200,7 +207,7 @@
                            <i class="bx bx-smile"></i>
                         </div>
                         <!--btn to make a tweet-->
-                        <div class="btn-tweet-confirm">
+                        <div class="btn-tweet-confirm" onclick="cu()">
                            <button type="submit">Tweet</button>
                         </div>
                      </div>
@@ -269,7 +276,7 @@
       }
 
       //event listener
-      //toggleThemeBtn.addEventListener("click", clickBtn);
+      toggleThemeBtn.addEventListener("click", changeTheme);
 
          
       function changeTheme() {
@@ -278,19 +285,19 @@
             modeText.innerHTML = "Lightmode";
             iconTheme.classList.remove("bx-moon");
             iconTheme.classList.add("bx-sun");
+         localStorage.setItem("themeMode", "light");
          } else {
             body.classList.remove("darkmode");
             modeText.innerHTML = "Darkmode";
             iconTheme.classList.remove("bx-sun");
             iconTheme.classList.add("bx-moon");
+         localStorage.setItem("themeMode", "dark");
          }
       }
-
+      
+      console.log(localStorage.getItem('themeMode'))
       changeTheme();
    </script>
-   <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
-   <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
-   <script src="js/firebase-config.js"></script>
    <script src="js/app.js"></script>
    <script src="js/who-to-follow-content.js"></script>
 </body>

@@ -109,7 +109,7 @@
 
 .tweet {
    /*display: flex;*/
-   padding: 10px 1rem 0 0;
+   padding: 10px 0 0;
    position: relative;
    border-top: 1px solid var(--body-color-2);
 }

@@ -12,7 +12,7 @@ body.darkmode .home-container {
 }
 body.darkmode .left-menu {
    background: var(--dark-body-color);
-   border-top: 2px solid var(--dark-body-color-2);
+   border-right: 2px solid var(--dark-body-color-2);
 }
 body.darkmode .right-menu {
    background: var(--dark-body-color);
@@ -48,10 +48,15 @@ body.darkmode .menu-open-and-logo {
 body.darkmode .tweet {
    border-top: 1px solid var(--dark-body-color-2);
 }
+body.darkmode .menu-bottom-mobile {
+   background: var(--dark-body-color);
+   border-top: 2px solid var(--dark-body-color-2);
+}
 body.darkmode .tweet:nth-last-child(1) {
    border-bottom: 1px solid var(--dark-body-color-2);
 }
 body.darkmode .user-tweet-name,
-body.darkmode .user-tweet-username {
+body.darkmode .user-tweet-username,
+body.darkmode .user-profile-picture{
    border-bottom: 1.5px solid var(--dark-body-color-2)
 }
