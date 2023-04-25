@@ -100,7 +100,7 @@
 }
 
 .menu-open-and-logo {
-   display: none;
+   display: flex;
 }
 
 .tweet-container {
@@ -198,6 +198,26 @@
    font-size: 1.5rem;
 }
 
+  .menu-open-and-logo {
+      padding: 8px;
+      display: flex;
+      border-bottom: 2px solid var(--body-color-2);
+   }
+
+   .menu-mobile-profile-pic {
+      width: 35px;
+      border-radius: 50px;
+   }
+
+   .twitter-heading-logo {
+      position: absolute;
+      color: var(--main-color);
+      font-size: 1.8rem;
+      top: 10px;
+      left: 50%;
+      transform: translate(-50%, 0);
+   }
+
 @media screen and (max-width: 1050px) {
    .home-container {
       position: absolute;
@@ -224,26 +244,6 @@
 
    .home-heading p {
       font-size: 1.2rem;
-   }
-
-   .menu-open-and-logo {
-      padding: 8px;
-      display: flex;
-      border-bottom: 2px solid var(--body-color-2);
-   }
-
-   .menu-mobile-profile-pic {
-      width: 35px;
-      border-radius: 50px;
-   }
-
-   .twitter-heading-logo {
-      position: absolute;
-      color: var(--main-color);
-      font-size: 1.8rem;
-      top: 10px;
-      left: 50%;
-      transform: translate(-50%, 0);
    }
 }
 
