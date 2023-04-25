@@ -299,7 +299,8 @@
       changeTheme();
    </script>
    <script src="js/app.js"></script>
+   <script src="js/mobile-menu.js"></script>
    <script src="js/who-to-follow-content.js"></script>
 </body>
 
-</html>
+</html>M
