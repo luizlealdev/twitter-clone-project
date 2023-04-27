@@ -3,60 +3,82 @@ body.darkmode {
    background: var(--dark-body-color);
    color: var(--dark-text-color);
 }
+
 body.darkmode a:not(.sugg-username a) {
    color: var(--dark-text-color);
 }
+
 body.darkmode .home-container {
    border-left: 2px solid var(--dark-body-color-2);
    border-right: 2px solid var(--dark-body-color-2);
 }
+
 body.darkmode .left-menu {
    background: var(--dark-body-color);
-   border-right: 2px solid var(--dark-body-color-2);
 }
+
 body.darkmode .right-menu {
    background: var(--dark-body-color);
 }
+
 body.darkmode .home-container .home-heading p {
    border-bottom: 2px solid var(--dark-body-color-2);
 }
+
 body.darkmode .right-menu .trending-container,
 body.darkmode .right-menu .suggestion-container,
 body.darkmode .right-menu .search-form {
    background: #121212;
 }
+
 body.darkmode .right-menu .trending-text-heading,
 body.darkmode .right-menu .suggestion-text-heading {
    border-bottom: 1.5px solid var(--dark-body-color-2);
 }
+
 body.darkmode .right-menu .show-more-footer {
    border-top: 1.5px solid var(--dark-body-color-2);
 }
+
 body.darkmode input,
 body.darkmode textarea {
    color: var(--dark-text-color);
 }
+
 body.darkmode .left-menu .selected {
    color: var(--main-color);
 }
+
 body.darkmode .left-menu .tweet-btn {
    box-shadow: 1px 5px 15px var(--dark-body-color-2);
 }
+
 body.darkmode .menu-open-and-logo {
    border-bottom: 2px solid var(--dark-body-color-2);
 }
+
 body.darkmode .tweet {
    border-top: 1px solid var(--dark-body-color-2);
 }
+
 body.darkmode .menu-bottom-mobile {
    background: var(--dark-body-color);
    border-top: 2px solid var(--dark-body-color-2);
 }
+
 body.darkmode .tweet:nth-last-child(1) {
    border-bottom: 1px solid var(--dark-body-color-2);
 }
+
 body.darkmode .user-tweet-name,
 body.darkmode .user-tweet-username,
-body.darkmode .user-profile-picture{
+body.darkmode .user-profile-picture {
    border-bottom: 1.5px solid var(--dark-body-color-2)
+}
+
+@media screen and (max-width: 768px) {
+   body.darkmode .left-menu {
+      border-right: 2px solid var(--dark-body-color-2);
+   }
+
 }

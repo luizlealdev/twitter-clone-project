@@ -113,6 +113,7 @@
    z-index: 40;
    opacity: 0;
    transition: all .3s ease-in-out;
+   display: none;
 }
 .overlay.show {
    opacity: 1;
@@ -123,7 +124,7 @@
    .left-menu {
       position: fixed !important;
       z-index: 100;
-      width: 20rem !important;
+      width: 15rem !important;
       border-right: 2px solid var(--body-color-2);
       transition: all .3s ease-in-out;
       left: -100%;

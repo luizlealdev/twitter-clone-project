@@ -46,6 +46,7 @@
    border: none;
    outline: none;
    background: transparent;
+   resize: none
 }
 
 .tweet-textarea::placeholder,
