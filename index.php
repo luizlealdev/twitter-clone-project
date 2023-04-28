@@ -90,7 +90,7 @@
             </div>
          </div>
       </div>
-      <div class="menu-bottom-mobile closed">
+      <div class="menu-bottom-mobile">
          <ul>
             <!--Mobile icons-->
             <li class="mobie-item">

@@ -1,11 +1,13 @@
 .home-container {
-   position: absolute;
+   position: fixed;
+   overflow-y: scroll;
    left: 45.5%;
    width: 36rem;
    height: 100vh;
    transform: translate(-50%, 0);
    border-left: 2px solid var(--body-color-2);
    border-right: 2px solid var(--body-color-2);
+   /*overflow-y: scroll;*/
 }
 
 .home-container .home-content {
@@ -115,7 +117,7 @@
    border-top: 1px solid var(--body-color-2);
 }
 
-.tweet:nth-last-child(1){
+.tweet:nth-last-child(1) {
    margin-bottom: 5rem;
    border-bottom: 1px solid var(--body-color-2);
 }
@@ -140,6 +142,7 @@
    font-weight: bold;
    margin: 5px 0 0 50px;
 }
+
 .tweet-username,
 .dot-style,
 .date {
@@ -158,10 +161,12 @@
    display: flex;
    margin-left: 5px;
 }
+
 .tweet-infors div {
    width: 100%;
    display: flex;
 }
+
 .user-profile-picture {
    margin: 5px 0 0 3px;
 }
@@ -199,25 +204,26 @@
    font-size: 1.5rem;
 }
 
-  .menu-open-and-logo {
-      padding: 8px;
-      display: flex;
-      border-bottom: 2px solid var(--body-color-2);
-   }
+.menu-open-and-logo {
+   position: relative;
+   padding: 8px;
+   display: flex;
+   border-bottom: 2px solid var(--body-color-2);
+}
 
-   .menu-mobile-profile-pic {
-      width: 35px;
-      border-radius: 50px;
-   }
+.menu-mobile-profile-pic {
+   width: 35px;
+   border-radius: 50px;
+}
 
-   .twitter-heading-logo {
-      position: absolute;
-      color: var(--main-color);
-      font-size: 1.8rem;
-      top: 10px;
-      left: 50%;
-      transform: translate(-50%, 0);
-   }
+.twitter-heading-logo {
+   position: absolute;
+   color: var(--main-color);
+   font-size: 1.8rem;
+   top: 10px;
+   left: 50%;
+   transform: translate(-50%, 0);
+}
 
 @media screen and (max-width: 1050px) {
    .home-container {
@@ -229,7 +235,8 @@
 
 @media screen and (max-width: 970px) {
    .home-container {
-      position: static;
+      position: static !important;
+      overflow-y: none;
       margin: 0 50%;
       width: 36rem;
       height: 100vh;
@@ -237,12 +244,12 @@
       top: 0;
       transform: translate(-50%, 0);*/
    }
-
+   
    .home-heading p {
       /*-webkit-margin-before: 1.5rem;*/
       border-bottom: none !important;
    }
-
+   
    .home-heading p {
       font-size: 1.2rem;
    }
@@ -252,8 +259,9 @@
    * {
       box-sizing: border-box;
    }
+   
    .home-container {
-      position: static;
+      position: static !important;
       width: 100vw;
       border-left: none !important;
       border-right: none !important;

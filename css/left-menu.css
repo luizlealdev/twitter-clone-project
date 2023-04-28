@@ -124,7 +124,7 @@
    .left-menu {
       position: fixed !important;
       z-index: 100;
-      width: 15rem !important;
+      width: 18rem !important;
       border-right: 2px solid var(--body-color-2);
       transition: all .3s ease-in-out;
       left: -100%;
@@ -163,7 +163,7 @@
    .menu-bottom-mobile {
       position: fixed;
       display: flex;
-      z-index: 30;
+      z-index: 20;
       right: 0;
       bottom: 0;
       width: 100vw;
@@ -172,7 +172,7 @@
       border-top: 2px solid var(--body-color-2);
    }
    
-   ul {
+   .menu-bottom-mobile ul {
       width: 100%;
       height: 100%;
       display: flex;
@@ -180,7 +180,7 @@
       justify-content: space-around;
       list-style: none;
       font-size: 1.7rem;
-      margin-top: 5px;
+      margin-top: 17px;
    }
    
 }

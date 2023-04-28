@@ -76,7 +76,7 @@ body.darkmode .user-profile-picture {
    border-bottom: 1.5px solid var(--dark-body-color-2)
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 970px) {
    body.darkmode .left-menu {
       border-right: 2px solid var(--dark-body-color-2);
    }
