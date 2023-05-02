@@ -236,14 +236,12 @@
                //show tweets
                foreach ($results as $object) {
                   
-                  $profile_pic_url = $object->get('image'); // Verifica se a imagem está funcionando 
+                  $profile_pic_url = $object->get('image');
                   $profile_pic_info = @getimagesize($profile_pic_url); 
                   
                   if ($profile_pic_info !== false) { 
-                     // A imagem está funcionando, então altera seu src 
                      $sucess_image_url = $profile_pic_url; 
                   } else {
-                     // A imagem não está funcionando, então define um src alternativo 
                      $sucess_image_url = 'img/defalt-avatar.png'; 
                   }
                   
@@ -253,7 +251,7 @@
                      $new_name = $object->get('name');
                   }
                   
-                  echo '<div class="tweet" id="'. $object->get('tweet_id') .'"><div class="tweet-profile-infors"><div class="user-tweet-profile-picture"><img class="ab-profile tweet-profile-picture" src="'.$sucess_image_url.'" alt="Profile Picture" /></div><div class="tweet-profile-name"><p class="tweet-name">'.$new_name.'</p><p class="tweet-username">@'. substr($object->get('username'), 0, 16).'</p><p class="dot-style">•</p><p class="date">'.$object->get('date').'</p></div></div><div class="tweet-text"><p>'. $object->get('tweet')  .'</p></div><div class="tweet-icons"><i class="bx bx-comment"></i><i class="bx bx-repost"></i><i class="bx bx-heart"></i><i class="bx bx-bookmark"></i></div></div>';
+                  echo '<div class="tweet" id="'. $object->get('tweet_id') .'"><div class="tweet-content" ><div class="tweet-profile-infors"><div class="user-tweet-profile-picture"><img class="ab-profile tweet-profile-picture" src="'.$sucess_image_url.'" alt="Profile Picture" /></div><div class="tweet-profile-name"><p class="tweet-name">'.$new_name.'</p><p class="tweet-username">@'. substr($object->get('username'), 0, 16).'</p><p class="dot-style">•</p><p class="date">'.$object->get('date').'</p></div></div><div class="tweet-text"><p>'. $object->get('tweet')  .'</p></div><div class="tweet-icons"><i class="bx bx-comment"></i><i class="bx bx-repost"></i><i class="bx bx-heart"></i><i class="bx bx-bookmark"></i></div></div></div>';
                }
             ?>
          </div>

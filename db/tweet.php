@@ -23,4 +23,9 @@
    } catch (ParseException $ex) {  
      echo 'Error: ' . $ex->getMessage();
    }
+
+   header("Location: ../index.php");
+   exit;
+?>
+
 ?>
